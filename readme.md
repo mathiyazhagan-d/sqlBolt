@@ -11,6 +11,7 @@
 
 ## -- Exercise 1
 <img src="./img/img (1).png" alt="question">
+
 ### -- Find the title of each film
 SELECT Title 
 FROM movies;
@@ -33,6 +34,7 @@ FROM movies;
 
 ## -- Exercise 2
 <img src="./img/img (2).png" alt="question">
+
 ### -- Find the movie with a row id of 6
 SELECT * 
 FROM movies 
@@ -55,6 +57,7 @@ LIMIT 5;
 
 ## -- Exercise 3
 <img src="./img/img (3).png" alt="question">
+
 ### -- Find all the Toy Story movies
 SELECT * 
 FROM movies 
@@ -77,6 +80,7 @@ WHERE Title  like "%WALL-%";
 
 ## -- Exercise 4
 <img src="./img/img (4).png" alt="question">
+
 ### -- List all directors of Pixar movies (alphabetically), without duplicates
 SELECT DISTINCT Director 
 FROM movies 
@@ -102,6 +106,7 @@ limit 5 offset 5 ;
 
 ## -- Exercise 5
 <img src="./img/img (5).png" alt="question">
+
 ### -- List all the Canadian cities and their populations
 SELECT * 
 FROM north_american_cities 
@@ -135,6 +140,7 @@ limit 2 offset 2 ;
 
 ## -- Exercise 6
 <img src="./img/img (6).png" alt="question">
+
 ### -- Find the domestic and international sales for each movie
  SELECT title,Domestic_sales,International_sales 
  FROM movies 
@@ -154,6 +160,7 @@ limit 2 offset 2 ;
 
 ## -- Exercise 7
 <img src="./img/img (7).png" alt="question">
+
 ### -- Find the list of all buildings that have employees
 SELECT DISTINCT Building 
 FROM employees 
@@ -171,6 +178,7 @@ LEFT JOIN Employees ON  Building_name=Building  ;
 
 ## -- Exercise 8
 <img src="./img/img (8).png" alt="question">
+
 ### -- Find the name and role of all employees who have not been assigned to a building
 SELECT * 
 FROM employees 
@@ -185,6 +193,7 @@ WHERE Building IS NULL;
 
 ## -- Exercise 9
 <img src="./img/img (9).png" alt="question">
+
 ### -- List all movies and their combined sales in millions of dollars 
 SELECT title,(Domestic_sales+International_sales)/1000000 AS TOTAL_SALES 
 FROM movies  
@@ -299,7 +308,8 @@ Name TEXT,
 Version FLOAT,
 Download_count INTEGER);
 
-## -- Exercise 17<img src="./img/img (17).png" alt="question">
+## -- Exercise 17
+<img src="./img/img (17).png" alt="question">
 
 ### -- Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in.
 ALTER TABLE Movies
@@ -309,7 +319,8 @@ ADD Aspect_ratio FLOAT DEFAULT 1  ;
 ALTER TABLE Movies
 ADD Language TEXT DEFAULT English  ;
 
-## -- Exercise 18<img src="./img/img (18).png" alt="question">
+## -- Exercise 18
+<img src="./img/img (18).png" alt="question">
 
 ### -- We've sadly reached the end of our lessons, lets clean up by removing the Movies table
 DROP TABLE Movies;
