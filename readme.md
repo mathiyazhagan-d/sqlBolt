@@ -1,5 +1,4 @@
-
--- Exercise 1
+### -- Exercise 1
 SELECT Title 
 FROM movies;
 
@@ -15,7 +14,7 @@ FROM movies;
 SELECT *   
 FROM movies;
 
--- Exercise 2
+### -- Exercise 2
 
 SELECT * 
 FROM movies 
@@ -37,7 +36,7 @@ FROM movies
 
 LIMIT 5;
 
--- Exercise 3
+### -- Exercise 3
 
 SELECT * 
 FROM movies 
@@ -58,7 +57,7 @@ SELECT *
 FROM movies 
 WHERE Title  like "%WALL-%";
 
--- Exercise 4
+### -- Exercise 4
 
 SELECT DISTINCT Director 
 FROM movies 
@@ -82,7 +81,7 @@ FROM movies
 order by Title 
 limit 5 offset 5 ;
 
--- Exercise 5
+### -- Exercise 5
 SELECT * 
 FROM north_american_cities 
 where country = "Canada";
@@ -109,7 +108,7 @@ WHERE Country like "%United States%"
 order by Population desc 
 limit 2 offset 2 ;
 
--- Exercise 6
+### -- Exercise 6
  SELECT title,Domestic_sales,International_sales 
  FROM movies 
  join Boxoffice on Id=Movie_id ;
@@ -124,7 +123,7 @@ limit 2 offset 2 ;
  join Boxoffice on Id=Movie_id 
  order by Rating desc;
 
--- Exercise 7
+### -- Exercise 7
 SELECT DISTINCT Building 
 FROM employees 
 join Buildings on Building=Building_name 
@@ -137,7 +136,7 @@ SELECT DISTINCT Building_NAME,Role
 FROM Buildings 
 LEFT JOIN Employees ON  Building_name=Building  ;
 
--- Exercise 8-
+### -- Exercise 8-
 
 SELECT * 
 FROM employees 
@@ -152,7 +151,7 @@ ON Building_name = Building
 
 WHERE Building IS NULL;
 
--- Exercise 9
+### -- Exercise 9
 
 SELECT title,(Domestic_sales+International_sales)/1000000 AS TOTAL_SALES 
 FROM movies  
@@ -168,7 +167,7 @@ SELECT title,(year%2) AS EVEN_YEAR
 FROM movies 
 where EVEN_YEAR =0 ;
 
--- Exercise 10
+### -- Exercise 10
 SELECT max(Years_employed) 
 FROM employees;
 
@@ -180,7 +179,7 @@ FROM employees GROUP BY ROLE;
 SELECT SUM(Years_employed),Building   
 FROM employees GROUP BY Building;
 
--- Exercise  11
+### -- Exercise  11
 
 SELECT role,count() 
 FROM employees 
@@ -194,7 +193,7 @@ SELECT *,role,sum(Years_employed)
 FROM employees 
 where role like "%Engineer%";
 
--- Exercise 12
+### -- Exercise 12
 
 SELECT Director,count() 
 FROM movies group by Director;
@@ -206,14 +205,14 @@ JOIN Boxoffice
 ON Id=Movie_id 
 GROUP BY Director;
 
--- Exercise 13
+### -- Exercise 13
 INSERT INTO Movies
 VALUES (4, "Toy Story 4", "John Lasseter", 2017, 123);
 
 INSERT INTO Boxoffice 
 VALUES (4,8.7,340000000,270000000)
 
--- Exercise 14
+### -- Exercise 14
 UPDATE Movies
 SET Director="John Lasseter"
 WHERE Title ="A Bug's Life";
@@ -225,24 +224,24 @@ WHERE Title ="Toy Story 2";
 UPDATE Movies
 SET Title="Toy Story 3",Director="Lee Unkrich"
 WHERE Title ="Toy Story 8";
--- Exercise 15
+### -- Exercise 15
 DELETE FROM Movies
 WHERE Year<2005;
 
 DELETE FROM Movies
 WHERE Director="Andrew Stanton";
--- Exercise 16
+### -- Exercise 16
 CREATE TABLE Database (
 Name TEXT,
 Version FLOAT,
 Download_count INTEGER)
--- Exercise 17
+### -- Exercise 17
 ALTER TABLE Movies
 ADD Aspect_ratio FLOAT DEFAULT 1  ;
 
 ALTER TABLE Movies
 ADD Language TEXT DEFAULT English  ;
--- Exercise 18
+### -- Exercise 18
 DROP TABLE Movies;
 
 DROP TABLE BoxOffice;
