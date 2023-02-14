@@ -1,3 +1,13 @@
+
+# day 36 Database - MySQL
+
+## task screenshot
+
+<img src="./img/Screens.png" alt="question">
+
+
+## Answer are give below for execise
+
 ### -- Exercise 1
 SELECT Title 
 FROM movies;
