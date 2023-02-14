@@ -9,7 +9,7 @@
 
 ## Answer are give below for execise
 
-### -- Exercise 1
+## -- Exercise 1
 
 ### -- Find the title of each film
 SELECT Title 
@@ -31,7 +31,7 @@ FROM movies;
 SELECT *   
 FROM movies;
 
-### -- Exercise 2
+## -- Exercise 2
 
 ### -- Find the movie with a row id of 6
 SELECT * 
@@ -53,7 +53,7 @@ SELECT *
 FROM movies 
 LIMIT 5;
 
-### -- Exercise 3
+## -- Exercise 3
 
 ### -- Find all the Toy Story movies
 SELECT * 
@@ -75,7 +75,7 @@ SELECT *
 FROM movies 
 WHERE Title  like "%WALL-%";
 
-### -- Exercise 4
+## -- Exercise 4
 
 ### -- List all directors of Pixar movies (alphabetically), without duplicates
 SELECT DISTINCT Director 
@@ -100,7 +100,7 @@ FROM movies
 order by Title 
 limit 5 offset 5 ;
 
-### -- Exercise 5
+## -- Exercise 5
 
 ### -- List all the Canadian cities and their populations
 SELECT * 
@@ -133,7 +133,7 @@ WHERE Country like "%United States%"
 order by Population desc 
 limit 2 offset 2 ;
 
-### -- Exercise 6
+## -- Exercise 6
 
 ### -- Find the domestic and international sales for each movie
  SELECT title,Domestic_sales,International_sales 
@@ -152,7 +152,7 @@ limit 2 offset 2 ;
  join Boxoffice on Id=Movie_id 
  order by Rating desc;
 
-### -- Exercise 7
+## -- Exercise 7
 
 ### -- Find the list of all buildings that have employees
 SELECT DISTINCT Building 
@@ -169,7 +169,7 @@ SELECT DISTINCT Building_NAME,Role
 FROM Buildings 
 LEFT JOIN Employees ON  Building_name=Building  ;
 
-### -- Exercise 8
+## -- Exercise 8
 
 ### -- Find the name and role of all employees who have not been assigned to a building
 SELECT * 
@@ -183,7 +183,7 @@ LEFT JOIN Employees
 ON Building_name = Building
 WHERE Building IS NULL;
 
-### -- Exercise 9
+## -- Exercise 9
 
 ### -- List all movies and their combined sales in millions of dollars 
 SELECT title,(Domestic_sales+International_sales)/1000000 AS TOTAL_SALES 
@@ -200,7 +200,7 @@ SELECT title,(year%2) AS EVEN_YEAR
 FROM movies 
 where EVEN_YEAR =0 ;
 
-### -- Exercise 10
+## -- Exercise 10
 
 ### -- Find the longest time that an employee has been at the studio
 SELECT max(Years_employed) 
@@ -214,7 +214,7 @@ FROM employees GROUP BY ROLE;
 SELECT SUM(Years_employed),Building   
 FROM employees GROUP BY Building;
 
-### -- Exercise  11
+## -- Exercise  11
 
 ### -- Find the number of Artists in the studio (without a HAVING clause)
 SELECT role,count() 
@@ -230,7 +230,7 @@ SELECT *,role,sum(Years_employed)
 FROM employees 
 where role like "%Engineer%";
 
-### -- Exercise 12
+## -- Exercise 12
 
 ### -- Find the number of movies each director has directed
 SELECT Director,count() 
@@ -243,7 +243,7 @@ JOIN Boxoffice
 ON Id=Movie_id 
 GROUP BY Director;
 
-### -- Exercise 13
+## -- Exercise 13
 
 ### -- Add the studio's new production, Toy Story 4 to the list of movies (you can use any director)
 INSERT INTO Movies
@@ -253,7 +253,7 @@ VALUES (4, "Toy Story 4", "John Lasseter", 2017, 123);
 INSERT INTO Boxoffice 
 VALUES (4,8.7,340000000,270000000)
 
-### -- Exercise 14
+## -- Exercise 14
 
 ### -- The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
 UPDATE Movies
@@ -270,7 +270,7 @@ UPDATE Movies
 SET Title="Toy Story 3",Director="Lee Unkrich"
 WHERE Title ="Toy Story 8";
 
-### -- Exercise 15
+## -- Exercise 15
 
 ### -- This database is getting too big, lets remove all movies that were released before 2005.
 DELETE FROM Movies
@@ -280,7 +280,7 @@ WHERE Year<2005;
 DELETE FROM Movies
 WHERE Director="Andrew Stanton";
 
-### -- Exercise 16
+## -- Exercise 16
 
 ### -- Create a new table named Database with the following columns:
 ### -- – Name A string (text) describing the name of the database
@@ -292,7 +292,7 @@ Name TEXT,
 Version FLOAT,
 Download_count INTEGER);
 
-### -- Exercise 17
+## -- Exercise 17
 
 ### -- Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in.
 ALTER TABLE Movies
@@ -302,7 +302,7 @@ ADD Aspect_ratio FLOAT DEFAULT 1  ;
 ALTER TABLE Movies
 ADD Language TEXT DEFAULT English  ;
 
-### -- Exercise 18
+## -- Exercise 18
 
 ### -- We've sadly reached the end of our lessons, lets clean up by removing the Movies table
 DROP TABLE Movies;
