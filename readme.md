@@ -3,7 +3,7 @@
 
 ## task screenshot
 
-<img src="./img/Screens.png" alt="question">
+<img src="./img/img (19).png" alt="question">
 
 ## SQL => <a href="https://sqlbolt.com/" target="_blank">https://sqlbolt.com/</a>
 
